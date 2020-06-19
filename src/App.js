@@ -21,8 +21,8 @@ class App extends React.Component {
   renderModal = () => (
     <div className='overlay'>
       <div className='container-modal'>
-        <p>para fechar clique no botão abaixo</p>
-        <button onClick={() => this.setState({modOpen: false})}>fechar modal</button>
+        <p className="TextModal">para fechar clique no botão abaixo</p>
+        <button className="ClickModal" onClick={() => this.setState({modOpen: false})}>fechar modal</button>
       </div>
     </div>
   )
@@ -31,8 +31,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <form className='box-form' onSubmit={this.openModal}>
-          <p>o modal só abre clicando no botão</p>
-          <button>abrir modal</button>
+          <p className="Text">o modal só abre clicando no botão</p>
+          <button className="Click">abrir modal</button>
         </form>
         {this.state.modOpen ? this.renderModal() : null}
       </div>
